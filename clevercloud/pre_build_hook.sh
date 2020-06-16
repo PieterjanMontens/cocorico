@@ -7,4 +7,5 @@ var_list="MYSQL_ADDON_HOST MYSQL_ADDON_PORT MYSQL_ADDON_DB MYSQL_ADDON_USER MYSQ
 for key in $var_list; do
     echo "Setting $key in parameters.yml"
     sed -e -i 's|%'"$key"'%|'"${!key}"'|' ./app/config/parameters.yml
+done
 cat ./app/config/parameters.yml
