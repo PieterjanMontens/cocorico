@@ -11,3 +11,6 @@ fi
 if [[ ! -d web/css/compiled || ! -d web/js/compiled ]]; then
     php bin/console assetic:dump
 fi
+
+echo "=====> Enabling $APP_ENV .htaccess file"
+cp web/.htaccess.$APP_ENV.dist web/.htaccess
