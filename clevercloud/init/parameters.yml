@@ -1,11 +1,11 @@
 parameters:
-    database_host: '%env(MYSQL_ADDON_HOST)%'
-    database_port: '%env(MYSQL_ADDON_PORT)%'
-    database_name: '%env(MYSQL_ADDON_DB)%'
-    database_user: '%env(MYSQL_ADDON_USER)%'
-    database_password: '%env(MYSQL_ADDON_PASSWORD)%'
-    mongodb_server: '%env(MONGODB_ADDON_URI)%'
-    mongodb_database_name: '%env(MONGODB_ADDON_DB)%'
+    database_host: '%MYSQL_ADDON_HOST%'
+    database_port: '%MYSQL_ADDON_PORT%'
+    database_name: '%MYSQL_ADDON_DB%'
+    database_user: '%MYSQL_ADDON_USER%'
+    database_password: '%MYSQL_ADDON_PASSWORD%'
+    mongodb_server: '%MONGODB_ADDON_URI%'
+    mongodb_database_name: '%MONGODB_ADDON_DB%'
     mailer_transport: smtp
     mailer_host: localhost
     mailer_user: null
