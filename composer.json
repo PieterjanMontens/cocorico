@@ -126,7 +126,8 @@
   "config": {
     "bin-dir": "bin",
     "component-dir": "web/assets",
-    "sort-packages": true
+    "sort-packages": true,
+    "preferred-install": "dist"
   },
   "extra": {
     "symfony-app-dir": "app",
