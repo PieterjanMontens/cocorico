@@ -9,9 +9,3 @@ for key in $var_list; do
     sed -i -e 's|%'"$key"'%|'"${!key}"'|' ./app/config/parameters.yml
 done
 cat ./app/config/parameters.yml
-
-
-# Force install backwards compatible apcu
-echo "=====> Installing apcu_bc"
-pecl channel-update pecl.php.net
-pecl install apcu_bc
