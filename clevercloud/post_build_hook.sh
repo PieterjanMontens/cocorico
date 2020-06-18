@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ ! -f web/json/currencies.json ]]; then
     php bin/console cocorico:currency:update
