@@ -33,6 +33,7 @@ RUN apt-get install -y \
         php7.3-zip \
         php7.3-mbstring \
         php7.3-xml \
+        php7.3-intl \
         php-dom \
         php-mongodb \
         php-mysql
@@ -43,8 +44,7 @@ RUN apt-get install -y \
         git \
         default-mysql-client \ 
         unzip \
-        wget \
-        nginx
+        wget
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer global require hirak/prestissimo 
@@ -74,5 +74,6 @@ RUN clevercloud/post_build_hook.sh
 RUN wget https://get.symfony.com/cli/installer -O - | bash
 RUN useradd -ms /bin/bash _www && chown -R _www:_www ./var
 # RUN service nginx restart && service php7.3-fpm start
+COPY ./docker/run.sh ./run
 CMD ["bash"]
 # CMD ["/home/cocorico/.symfony/bin/symfony server:start --no-tls --port 80"]
